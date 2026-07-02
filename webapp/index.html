@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digit Recognizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>Draw a digit</h1>
+      <p class="sub">Sketch a number 0–9, then hit Predict.</p>
+    </header>
+
+    <div class="content">
+      <section class="draw">
+        <canvas id="pad" width="280" height="280"></canvas>
+        <div class="buttons">
+          <button id="clear" class="btn ghost">Clear</button>
+          <button id="predict" class="btn primary">Predict</button>
+        </div>
+      </section>
+
+      <section class="result">
+        <div class="verdict">
+          <span id="verdict-digit">–</span>
+          <span class="verdict-label">prediction</span>
+        </div>
+        <ul id="bars" class="bars"></ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
