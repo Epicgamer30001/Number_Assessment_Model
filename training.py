@@ -14,6 +14,8 @@ path = [784,128,64,10]
 lr = 0.02
 epochs = 10000
 
+model = CrossEntropyModel(path,lr)
+
 def main():
     training_images, training_labels, test_images,test_labels = load_data.load_all()
 
@@ -37,8 +39,7 @@ def main():
     torch.save(model.state_dict(), "model.pth")
 
 #------------------testing---------------------
-    #model.eval()
-    model = CrossEntropyModel([784, 128, 64, 10], lr=0.01)
+    model.eval()
     model.load_state_dict(torch.load("model.pth"))
 
 
