@@ -25,7 +25,7 @@ class CrossEntropyModel(nn.Module):
         return self.network(x)
     
     def backprop(self,loss):
-        self.optimizer.zero_grad()
+        self.optimizer.zero_grad() 
         loss.backward()
         self.optimizer.step()
 
